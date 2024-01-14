@@ -1,1 +1,4 @@
 # CrapGPT
+
+## Installation instructions
+
