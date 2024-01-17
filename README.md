@@ -11,6 +11,5 @@ CrapGPT will be available through PyPI. Once available, we recommend installing 
 Run the following commands to install crapgpt:
 
 ```
-pip install cython "numpy >= 1.12.0"
-pip install empress
+pip install crapgpt
 ```
