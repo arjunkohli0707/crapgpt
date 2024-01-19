@@ -1,0 +1,27 @@
+[tool.hatch.build.targets.wheel]
+packages = ["src/crapgpt"]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "crapgpt"
+version = "0.0.1"
+authors = [
+  { name="Arjun Kohli", email="a2kohli@ucsd.edu" },
+  { name="Ismail Faiz", email="ifaiz@ucsd.edu" },
+  { name="Yoto Kim", email="yok038@ucsd.edu" },
+]
+description = "Fine-tuned LLM to predict aspects of an individual's diet given their microbiome profile"
+readme = "README.md"
+requires-python = ">=3.8"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+
+[project.urls]
+Homepage = "https://github.com/arjunkohli0707/crapgpt"
+Issues = "https://github.com/arjunkohli0707/crapgpt/issues"
