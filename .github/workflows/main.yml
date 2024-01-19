@@ -1,46 +1,46 @@
-# # Tests crapgpt's Python code within a QIIME 2 conda environment.
-# # Also lints and stylechecks the code.
-# name: Lint and Testing Check
+# Tests crapgpt's Python code within a QIIME 2 conda environment.
+# Also lints and stylechecks the code.
+name: Lint and Testing Check
 
-# # On is the trigger. So the workflow runs on push/pull events to the main branch
-# on:
-#   pull_request:
-#     branches:
-#     - main
-#   push:
-#     branches:
-#     - main
+# On is the trigger. So the workflow runs on push/pull events to the main branch
+on:
+  pull_request:
+    branches:
+    - main
+  push:
+    branches:
+    - main
 
-# jobs:
-#   # build is a job
-#   build:
-#     runs-on: ubuntu-latest
+jobs:
+  # build is a job
+  build:
+    runs-on: ubuntu-latest
 
-#     steps:
-#     - uses: actions/checkout@v4
+    steps:
+    - uses: actions/checkout@v4
 
-#     - name: Run linting and stylechecking
-#       run: |
-#         conda run -n base make stylecheck
+    - name: Run linting and stylechecking
+      run: |
+        conda run -n base make stylecheck
 
-#     - name: Set up conda
-#       uses: s-weigand/setup-conda@v1
-#       with:
-#         update-conda: true
-#         python-version: 3.10
-#         conda-channels: anaconda, conda-forge
+    - name: Set up conda
+      uses: s-weigand/setup-conda@v1
+      with:
+        update-conda: true
+        python-version: 3.10
+        conda-channels: anaconda, conda-forge
 
-#     - name: Create QIIME 2 conda environment
-#       run: |
-#           wget https://data.qiime2.org/distro/core/qiime2-2020.6-py36-linux-conda.yml
-#           conda env create -n qiime2-dev --file qiime2-2020.6-py36-linux-conda.yml
+    - name: Create QIIME 2 conda environment
+      run: |
+          wget https://data.qiime2.org/distro/core/qiime2-2020.6-py36-linux-conda.yml
+          conda env create -n qiime2-dev --file qiime2-2020.6-py36-linux-conda.yml
 
-#     # - name: Install crapgpt
-#     #  run: |
+    # - name: Install crapgpt
+    #  run: |
     
 
-#     - name: Run tests
-#       run: conda run -n qiime2-dev make test
+    - name: Run tests
+      run: conda run -n qiime2-dev make test
 
     
 
