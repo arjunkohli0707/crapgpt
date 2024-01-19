@@ -19,9 +19,6 @@ jobs:
     steps:
     - uses: actions/checkout@v4
 
-    - name: Run linting and stylechecking
-      run: |
-        conda run -n base make stylecheck
 
     - name: Set up conda
       uses: s-weigand/setup-conda@v1
@@ -29,6 +26,10 @@ jobs:
         update-conda: true
         python-version: 3.10
         conda-channels: anaconda, conda-forge
+    
+    - name: Run linting and stylechecking
+      run: |
+        conda run -n base make stylecheck
 
     - name: Create QIIME 2 conda environment
       run: |
