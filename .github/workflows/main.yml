@@ -22,19 +22,10 @@ jobs:
         with:
           auto-update-conda: true
           python-version: "3.10" 
-      - name: Create conda environment
+      - name: Create conda environment and install flake8
         run: |
-          conda create -y -n crapgpt python=3.10 flake8
-      - name: Run linting and stylechecking
-        shell: bash {0}
+          conda create -y -n crapgpt python=3.10
+          conda install -n crapgpt -c conda-forge flake8
+      - name: Run linting
         run: |
-          conda activate crapgpt
-          flake8 src      
-    # - name: Install crapgpt
-      #  run: |
-     # - name: Run tests
-     #   run: conda run -n qiime2-dev make test
-
-    
-
-    
+          conda run -n crapgpt flake8 src
