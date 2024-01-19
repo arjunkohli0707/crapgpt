@@ -13,3 +13,12 @@ Run the following commands to install crapgpt:
 ```
 pip install crapgpt
 ```
+Try running the command `crapgpt --help` to ensure that CrapGPT has been installed properly.
+
+#### Available commands
+
+CrapGPT provides three commands: 'crapgpt train --input_data', 'crapgpt evaluate' and 'crapgpt stats'
+
+#### Input Files
+
+CrapGPT takes the following filetypes as input:
