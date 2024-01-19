@@ -17,7 +17,7 @@ Try running the command `crapgpt --help` to ensure that CrapGPT has been install
 
 #### Available commands
 
-CrapGPT provides three commands: 'crapgpt train --input_data', 'crapgpt evaluate' and 'crapgpt stats'
+CrapGPT provides three commands: `crapgpt train --input_data`, `crapgpt evaluate` and `crapgpt stats`
 
 #### Input Files
 
