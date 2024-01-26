@@ -22,6 +22,6 @@ CTXSETS = {"help_option_names": ["-h", "--help"]}
     required=False, default=False, is_flag=True,
     help=desc.OUTPUT_MODEL_SUMMARY
 )
-def transfer_learning(config_json, continue_training, output_model_summary):
+def fine_tuning(config_json, continue_training, output_model_summary):
     pass
 
