@@ -1,5 +1,13 @@
 import click
 import crap_gpt._parameter_descriptions as desc
+import tensorflow as tf
+from crap_gpt.data_utils import (
+    get_sequencing_dataset,
+    combine_seq_diet_dataset,
+    batch_dataset
+)
+import pandas as pd
+import numpy as np
 
 # Allow using -h to show help information
 # https://click.palletsprojects.com/en/7.x/documentation/#help-parameter-customization
@@ -25,8 +33,10 @@ CTXSETS = {"help_option_names": ["-h", "--help"]}
 def fine_tuning(config_json, continue_training, output_model_summary):
     pass
 
-#Code to create datasets
 
+metadata = pd.read_csv('agp-metadata.txt', sep='\t', dtype=str)
+
+print(pd.to_numeric(metadata['age_years'], errors='coerce').describe())
 # batch_size=2
 # training_percent=0.7
 # seq_dataset = get_sequencing_dataset(table_path)
