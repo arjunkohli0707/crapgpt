@@ -1,5 +1,10 @@
 import click
 import crap_gpt._parameter_descriptions as desc
+from data_utils import (
+    get_sequencing_dataset,
+    combine_seq_diet_dataset,
+    batch_dataset
+)
 
 # Allow using -h to show help information
 # https://click.palletsprojects.com/en/7.x/documentation/#help-parameter-customization
@@ -45,3 +50,4 @@ def fine_tuning(config_json, continue_training, output_model_summary):
 # # print top 5 items of training_dataset
 # for x, y in training_dataset.take(5):
 #     print(x, y)
+get_sequencing_dataset('')
