@@ -30,8 +30,10 @@ CTXSETS = {"help_option_names": ["-h", "--help"]}
 def fine_tuning(config_json, continue_training, output_model_summary):
     pass
 
-#Code to create datasets
 
+metadata = pd.read_csv('agp-metadata.txt', sep='\t', dtype=str)
+
+print(pd.to_numeric(metadata['age_years'], errors='coerce').describe())
 # batch_size=2
 # training_percent=0.7
 # seq_dataset = get_sequencing_dataset(table_path)

@@ -1,1 +1,5 @@
 .env
+
+**/agp-metadata.txt
+
+miniconda.sh
